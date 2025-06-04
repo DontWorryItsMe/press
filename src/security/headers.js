@@ -9,8 +9,8 @@ export function setSecurityHeaders() {
       // Relaxed CSP for local development (keep for future dev use)
       meta.content = "default-src 'self' https://gtmrpijcmiqsobgoaiua.supabase.co wss://gtmrpijcmiqsobgoaiua.supabase.co; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self';";
     } else {
-      // Strict CSP for production (recommended)
-      meta.content = "default-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'; object-src 'none'; base-uri 'self';";
+      // Updated CSP for production: allow Supabase API/WebSocket and Google Fonts
+      meta.content = "default-src 'self' https://gtmrpijcmiqsobgoaiua.supabase.co wss://gtmrpijcmiqsobgoaiua.supabase.co; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self';";
     }
     document.head.appendChild(meta);
     const metaXFO = document.createElement('meta');
