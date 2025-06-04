@@ -296,7 +296,7 @@ const Notes = ({ onLogout, encryptionKey }) => {
                 <ListItemText
                   primary={<Typography fontWeight={700} fontSize={18}>{note.title}</Typography>}
                   secondary={<>
-                    <Typography fontSize={12} color="text.secondary" sx={{ display: 'inline-block', mr: 1 }}>
+                    <Typography color="text.secondary" sx={{ display: 'inline-block', mr: 1, fontSize: { xs: 10, sm: 12 } }}>
                       {(note.content || '').slice(0, 60)}{((note.content || '').length > 60 ? '...' : '')}
                     </Typography>
                     <Typography fontSize={11} color="#888" sx={{ display: 'inline-block' }}>
